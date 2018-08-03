@@ -19,3 +19,9 @@ import Transition from 'react-transition-group/Transition'
 + __timeout__ => how long takes the animation
 
 + __state__ => _Entering, entered, exiting and exited_
+
++ __mountOnEnter__ => this mounts the component when entering is begone
+
++ __unmountOnExit__ => this unmounts the component when exiting is begone
+
+With this model, we are playin literaly with CSS injected in React. This methode is not recomended.
