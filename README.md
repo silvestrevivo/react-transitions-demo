@@ -44,3 +44,31 @@ With this model, we are playin literaly with CSS injected in React. This methode
     )}
 </Transition>
 ```
+
+## CSSTransition
+
+```jsx
+import { CSSTransition } from 'react-transition-group';
+```
+Here we can play with some classes predefined by default:
+
++ .{classNames}-exit and .{classNames}-exit-active
+
++ .{classNames}-exit-done
+
++ .{classNames}-enter and .{classNames}-enter-active
+
++ .{classNames}-enter-done
+
+```jsx
+<CSSTransition
+    in={this.state.show}
+    timeout={5000}
+    classNames="square"
+>
+    <div className="square">
+        Hello
+    </div>
+</CSSTransition>
+```
+With the __classNames__ property we define the sufix for the classes by default.

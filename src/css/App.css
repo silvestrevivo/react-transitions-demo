@@ -102,6 +102,27 @@
                 CSSTRANSITIONS
 ========================================*/
 
+.square-exit-done{
+  background-color: #2196F3;
+  transform: translateX(-100%);
+}
+
+.square-enter-done{
+  transform: translateX(0%);
+}
+
+.square-enter.square-enter-active{
+  background-color: cadetblue;
+}
+
+.square-exit.square-exit-active{
+  background-color: cadetblue;
+}
+
+
+
+
+
 /*=======================================
                 TRANSITIONS GROUP
 ========================================*/
