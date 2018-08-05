@@ -36,7 +36,7 @@
   margin-top: 20px;
 }
 
-.btn-add, 
+.btn-add,
 .btn-remove {
   background: #9E9E9E;
   color: #FFf;
@@ -71,14 +71,38 @@
 }
 
 /*=======================================
-            TRANSITIONS BASIC 
+            TRANSITIONS BASIC
 ========================================*/
+.square {
+  background-color: #F44336;
+  height: 100px;
+  opacity: 1;
+  transition: all 2s ease;
+}
+
+.square.square-entering{
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.square.square-entered{
+  background: #2196F3;
+}
+
+.square.square-exiting{
+  background-color: greenyellow;
+}
+
+.square.square-exited{
+  opacity: 0;
+  transform: translateX(-100%);
+}
 
 /*=======================================
                 CSSTRANSITIONS
 ========================================*/
 
 /*=======================================
-                TRANSITIONS GROUP 
+                TRANSITIONS GROUP
 ========================================*/
 

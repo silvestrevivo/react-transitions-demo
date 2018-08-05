@@ -25,3 +25,22 @@ import Transition from 'react-transition-group/Transition'
 + __unmountOnExit__ => this unmounts the component when exiting is begone
 
 With this model, we are playin literaly with CSS injected in React. This methode is not recomended.
+
+```jsx
+<Transition in={this.state.show} timeout={2000} mountOnEnter unmountOnExit>
+    {state => (
+    <div
+        style={{
+        background: 'red',
+        height: '100px',
+        transition: 'all 2s ease',
+        opacity: state === 'exited' || state === 'exiting' ? 0 : 1,
+        }}
+    >
+        <p>
+        <strong>{state}</strong>
+        </p>
+    </div>
+    )}
+</Transition>
+```

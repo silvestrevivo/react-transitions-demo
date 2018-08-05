@@ -14,14 +14,8 @@ class TransitionComp extends Component {
   render() {
     return (
       <div>
-        {/* {this.state.show ? (
-          <div
-            style={{
-              background: 'red',
-              height: '100px',
-            }}
-          />
-        ) : null} */}
+        {/*
+          This is a solution with Style inline
         <Transition in={this.state.show} timeout={2000} mountOnEnter unmountOnExit>
           {state => (
             <div
@@ -37,6 +31,24 @@ class TransitionComp extends Component {
               </p>
             </div>
           )}
+        </Transition> */}
+
+        {/* This is a solution with classes */}
+        <Transition
+          in={this.state.show}
+          timeout={{
+            enter: 2000,
+            exit:1000
+          }}
+          onEnter={(node) => {console.log('Enter')}}
+        >
+          {
+            state =>
+            <div className={`square square-${state}`}>
+              {`square square-${state}`}
+            </div>
+          }
+
         </Transition>
         <div onClick={this.showDiv} className="showDiv">
           Show or hide
