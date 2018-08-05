@@ -72,3 +72,16 @@ Here we can play with some classes predefined by default:
 </CSSTransition>
 ```
 With the __classNames__ property we define the sufix for the classes by default.
+
+## TransitionGroup
+With __TransitionGroup__ we apply the _CSSTransition_ for a group of components. This is often used in display lists.
+
+```jsx
+<TransitionGroup
+    component="div"
+    className="list"
+>
+    {this.addElements()}
+</TransitionGroup>
+```
+We create a _div_ with a className __list__ for wrapping all component where we want to apply the animation.

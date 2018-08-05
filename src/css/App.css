@@ -119,11 +119,19 @@
   background-color: cadetblue;
 }
 
-
-
-
-
 /*=======================================
                 TRANSITIONS GROUP
 ========================================*/
+
+.item {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all .5s ease;
+}
+
+.item-enter.item-enter-active, .item.item-enter-done{
+  opacity: 1;
+  transform: translateX(0%);
+}
+
 
